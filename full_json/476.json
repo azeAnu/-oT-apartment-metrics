@@ -1,0 +1,110 @@
+{
+  "plan_id": "476",
+  "edges": [
+    {
+      "from": [
+        "прихожая"
+      ],
+      "to": [
+        "СУ"
+      ],
+      "distance": 229.115
+    },
+    {
+      "from": [
+        "комната"
+      ],
+      "to": [
+        "прихожая"
+      ],
+      "distance": 320.48
+    },
+    {
+      "from": [
+        "комната"
+      ],
+      "to": [
+        "кухня"
+      ],
+      "distance": 263.639
+    },
+    {
+      "from": [
+        "кухня"
+      ],
+      "to": [
+        "прихожая"
+      ],
+      "distance": 133.226
+    }
+  ],
+  "rooms": [
+    {
+      "name": "комната",
+      "centroid": [
+        290.002,
+        322.002
+      ]
+    },
+    {
+      "name": "кухня",
+      "centroid": [
+        123.001,
+        526.003
+      ]
+    },
+    {
+      "name": "прихожая",
+      "centroid": [
+        205.001,
+        631.004
+      ]
+    },
+    {
+      "name": "СУ",
+      "centroid": [
+        431.003,
+        630.004
+      ]
+    }
+  ],
+  "door_centers": [
+    {
+      "name": "door_1",
+      "center": [
+        342.002,
+        612.004
+      ]
+    }
+  ],
+  "edge_annotations": [
+    {
+      "type": "viaDoor",
+      "from": "прихожая",
+      "to": "СУ",
+      "via_door": "door_1",
+      "distance": 229.115
+    },
+    {
+      "type": "direct",
+      "from": "комната",
+      "to": "прихожая",
+      "via_door": null,
+      "distance": 320.48
+    },
+    {
+      "type": "direct",
+      "from": "комната",
+      "to": "кухня",
+      "via_door": null,
+      "distance": 263.639
+    },
+    {
+      "type": "direct",
+      "from": "кухня",
+      "to": "прихожая",
+      "via_door": null,
+      "distance": 133.226
+    }
+  ]
+}

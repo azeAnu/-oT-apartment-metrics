@@ -1,0 +1,6 @@
+__pycache__/
+venv/
+.ipynb_checkpoints/
+.cursor/
+.vscode/
+cubicasa5k/

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVG Plan Annotator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="panel">
+      <h1>Plan Annotator</h1>
+
+      <section>
+        <label for="planId">Plan ID</label>
+        <div class="row">
+          <input id="planId" placeholder="1732" />
+          <button id="loadPlanBtn">Load</button>
+        </div>
+        <p id="status" class="status">Введите ID и нажми Load.</p>
+      </section>
+
+      <section>
+        <div class="label">Mode</div>
+        <label><input type="radio" name="mode" value="room" checked /> Room center</label>
+        <label><input type="radio" name="mode" value="door" /> Door center</label>
+        <label><input type="radio" name="mode" value="edgeDirect" /> Connect rooms (click)</label>
+        <label><input type="radio" name="mode" value="edgeDoor" /> Connect via door (click)</label>
+      </section>
+
+      <section>
+        <label for="entityName">Name</label>
+        <input id="entityName" placeholder="гостиная / door_1" />
+      </section>
+
+      <section>
+        <div class="label">Connection by selects</div>
+        <label>From room</label>
+        <select id="fromRoom"></select>
+        <label>To room</label>
+        <select id="toRoom"></select>
+        <label>Door (optional)</label>
+        <select id="viaDoor"></select>
+        <div class="row">
+          <button id="addDirectEdgeBtn">+ Direct</button>
+          <button id="addDoorEdgeBtn">+ Via door</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="row">
+          <button id="undoBtn">Undo</button>
+          <button id="clearBtn" class="danger">Clear all</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">Export</div>
+        <button id="exportBtn">Download JSON</button>
+      </section>
+
+      <section>
+        <div class="label">Rooms</div>
+        <ul id="roomsList" class="list"></ul>
+      </section>
+
+      <section>
+        <div class="label">Doors</div>
+        <ul id="doorsList" class="list"></ul>
+      </section>
+
+      <section>
+        <div class="label">Edges</div>
+        <ul id="edgesList" class="list"></ul>
+      </section>
+    </aside>
+
+    <main class="canvasWrap">
+      <div id="svgHost"></div>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
